@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: rgb(255, 255, 255) ;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    border: 1px black solid;
+    border-top: none;
+    
+}
+
+.logo{
+   background-color: bisque;
+   border: 1px black solid;
+   border-bottom: none;
+   border-left: none;
+   border-top: none;
+   padding: 1rem;
+   font-weight: bold;
+   font-size: 2rem;
+}
+
+.btnContainer{
+    background-color: rgb(219, 180, 255);
+    border: 1px black solid;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    padding: 1rem;
+}
+
+.addBtn{
+    background-color: rgb(255, 166, 166);
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.addBtn:hover{
+    background-color: rgb(231, 152, 152);
+}
+
+.empty{
+    background-color: rgb(255, 180, 180);
+    border-right: 1px solid black;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 15px;
+}
+
+.inputBox{
+    background-color: rgb(245, 220, 220);
+    height: 12rem;
+    width: 22rem;
+    padding: 12px;
+
+}
+
+.inputBox:focus{
+    border: none;
+    outline: 1px solid black;
+}
