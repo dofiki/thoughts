@@ -1,12 +1,33 @@
-let menu = document.querySelector('.menu'); //menu is selected
-let btnContainer = menu.querySelector('.btnContainer') //btn container is selected
-let addBtn = btnContainer.querySelector('.addBtn'); // btn is selected
-let content = document.querySelector('.content'); // content container is selected
+let menu = document.querySelector('.menu'); 
+let btnContainer = menu.querySelector('.btnContainer') 
+let addBtn = btnContainer.querySelector('.addBtn');
+let content = document.querySelector('.content'); 
 
 addBtn.addEventListener('click', function(){
-    //when btn is clicked
-    let inputBox = document.createElement('p'); // paragragh element is created
-    inputBox.className = 'inputBox';  // paragraph classname is set to inputBox
-    inputBox.setAttribute('contenteditable', 'true'); // attribute is added to paragraph  
-    content.appendChild(inputBox); // inputBox paragraph is pushed into content container
+    
+    let inputBoxContainer = document.createElement('div');
+    inputBoxContainer.className = 'inputBoxContainer';
+    content.appendChild(inputBoxContainer); 
+    
+    
+    let inputBox = document.createElement('div')
+    inputBox.setAttribute('contenteditable','true');
+  
+    inputBox.className = 'inputBox';
+    inputBoxContainer.appendChild(inputBox);
+
+    let bottomDiv = document.createElement('div');
+    bottomDiv.className = 'bottomDiv';
+    inputBoxContainer.appendChild(bottomDiv);
+
+    
+    let bottomLeft = document.createElement('div');
+    bottomLeft.className = 'bottomLeft';
+    bottomDiv.appendChild(bottomLeft);
+
+    let bottomRight = document.createElement('div');
+    bottomRight.className = 'bottomRight';
+    bottomDiv.appendChild(bottomRight);
+    bottomRight.innerText='delete';
+
 } )

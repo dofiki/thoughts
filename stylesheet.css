@@ -18,9 +18,17 @@
    border-bottom: none;
    border-left: none;
    border-top: none;
-   padding: 1rem;
+   padding-top: 1.2rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
    font-weight: bold;
    font-size: 2rem;
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+    background-color: bisque;
 }
 
 .btnContainer{
@@ -38,6 +46,7 @@
     padding: 5px;
     font-size: 1.2rem;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .addBtn:hover{
@@ -57,15 +66,90 @@
     padding: 15px;
 }
 
+.inputBoxContainer{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    border: 1px solid black;
+    height: 16rem;
+    width: 22rem;
+}
+
 .inputBox{
     background-color: rgb(245, 220, 220);
-    height: 12rem;
-    width: 22rem;
-    padding: 12px;
-
+    padding: 12px;  
+    height: 11rem;
+    width: 20.5rem;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid black ;
+    overflow-y:scroll;
+   
 }
 
 .inputBox:focus{
-    border: none;
-    outline: 1px solid black;
+    outline: none;
 }
+
+.bottomDiv{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.bottomLeft{
+    background-color:bisque;
+    border-right: 1px solid black;
+}
+
+.bottomRight{
+    background-color: rgb(255, 180, 180);
+    text-align: center;
+    padding-top: 20px;
+    letter-spacing: 0.5px;
+    font-size: 1.5;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.bottomRight:hover{
+    background-color: rgb(231, 152, 152);
+}
+
+
+  /* Firefox */
+ .inputBox  {
+    scrollbar-width: auto;
+    scrollbar-color: #14021a  rgb(245, 220, 220);
+  }
+
+  /* Chrome, Edge, and Safari */
+  .inputBox::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  .inputBox::-webkit-scrollbar-track {
+    background:  rgb(245, 220, 220);
+  }
+
+  .inputBox::-webkit-scrollbar-thumb {
+    background-color: #c7aebe;
+    border-radius: 10px;
+    border: 5px solid  rgb(245, 220, 220);
+  }
+
+*{
+    scrollbar-width: auto;
+    scrollbar-color: #14021a  rgb(255, 255, 255);
+  }
+
+*::-webkit-scrollbar {
+    width: 16px;
+  }
+
+*::-webkit-scrollbar-track {
+    background:  rgb(254, 254, 254);
+  }
+
+*::-webkit-scrollbar-thumb {
+    background-color: #c7aebe;
+    border-radius: 10px;
+    border: 5px solid  rgb(255, 255, 255);
+  }
