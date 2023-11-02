@@ -3,6 +3,7 @@ let btnContainer = menu.querySelector('.btnContainer')
 let addBtn = btnContainer.querySelector('.addBtn');
 let content = document.querySelector('.content'); 
 
+
 addBtn.addEventListener('click', function(){
     
     let inputBoxContainer = document.createElement('div');
@@ -29,5 +30,10 @@ addBtn.addEventListener('click', function(){
     bottomRight.className = 'bottomRight';
     bottomDiv.appendChild(bottomRight);
     bottomRight.innerText='delete';
+
+    //delete functionality
+    bottomRight.addEventListener('click', function(){
+       bottomRight.parentElement.parentElement.remove();
+    })
 
 } )
