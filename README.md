@@ -1,3 +1,3 @@
 # thoughts
 minimal thoughts writing webapp.
-[dofiki.github.io/thoughts]
+[website link](dofiki.github.io/thoughts)
