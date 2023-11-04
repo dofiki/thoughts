@@ -11,7 +11,7 @@ addBtn.addEventListener('click', function(){
     content.appendChild(inputBoxContainer); 
     
     
-    let inputBox = document.createElement('div')
+    let inputBox = document.createElement('p')
     inputBox.setAttribute('contenteditable','true');
   
     inputBox.className = 'inputBox';
