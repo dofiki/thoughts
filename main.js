@@ -3,10 +3,15 @@ let btnContainer = menu.querySelector('.btnContainer')
 let addBtn = btnContainer.querySelector('.addBtn');
 let content = document.querySelector('.content'); 
 
+function showNotes(){
+    content.innerHTML = localStorage.getItem("notes");
+}
+
+showNotes();
 
 addBtn.addEventListener('click', function(){
     
-    let inputBoxContainer = document.createElement('div');
+   let inputBoxContainer = document.createElement('div');
     inputBoxContainer.className = 'inputBoxContainer';
     content.appendChild(inputBoxContainer); 
     
@@ -26,14 +31,29 @@ addBtn.addEventListener('click', function(){
     bottomLeft.className = 'bottomLeft';
     bottomDiv.appendChild(bottomLeft);
 
+    let bottomMid = document.createElement('div');
+    bottomMid.className = 'bottomMid';
+    bottomDiv.appendChild(bottomMid);
+    bottomMid.innerText='save';
+
     let bottomRight = document.createElement('div');
     bottomRight.className = 'bottomRight';
     bottomDiv.appendChild(bottomRight);
     bottomRight.innerText='delete';
 
-    //delete functionality
-    bottomRight.addEventListener('click', function(){
-       bottomRight.parentElement.parentElement.remove();
+    //save functionality
+    bottomMid.addEventListener('click', function(){
+        localStorage.setItem("notes", content.innerHTML);
     })
 
-} )
+    //delete functionality
+    bottomRight.addEventListener('click', function(){
+
+           let parentDiv = this.parentElement.parentElement; 
+           parentDiv.remove();
+
+           localStorage.setItem("notes", content.innerHTML);
+
+    })
+
+    });

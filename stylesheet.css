@@ -51,6 +51,7 @@
 
 .addBtn:hover{
     background-color: rgb(231, 152, 152);
+    transition: ease 0.5s;
 }
 
 .empty{
@@ -91,7 +92,7 @@
 
 .bottomDiv{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr  1fr;
 }
 
 .bottomLeft{
@@ -109,8 +110,26 @@
     cursor: pointer;
 }
 
+.bottomMid{
+    background-color: rgb(171, 254, 154);
+    text-align: center;
+    padding-top: 20px;
+    letter-spacing: 0.5px;
+    font-size: 1.5;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-right: 1px solid black;
+}
+
+.bottomMid:hover{
+    background-color: rgb(145, 210, 132);
+    transition: ease 0.5s;
+}
+
+
 .bottomRight:hover{
     background-color: rgb(231, 152, 152);
+    transition: ease 0.5s;
 }
 
 
