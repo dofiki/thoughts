@@ -1,17 +1,22 @@
 let menu = document.querySelector('.menu'); 
 let btnContainer = menu.querySelector('.btnContainer') 
+
 let addBtn = btnContainer.querySelector('.addBtn');
+
+
 let content = document.querySelector('.content'); 
 
 function showNotes(){
     content.innerHTML = localStorage.getItem("notes");
+    
 }
 
 showNotes();
 
+
 addBtn.addEventListener('click', function(){
     
-   let inputBoxContainer = document.createElement('div');
+    let inputBoxContainer = document.createElement('div');
     inputBoxContainer.className = 'inputBoxContainer';
     content.appendChild(inputBoxContainer); 
     
@@ -39,21 +44,35 @@ addBtn.addEventListener('click', function(){
     let bottomRight = document.createElement('div');
     bottomRight.className = 'bottomRight';
     bottomDiv.appendChild(bottomRight);
-    bottomRight.innerText='delete';
+    bottomRight.innerText='delete'; 
 
-    //save functionality
-    bottomMid.addEventListener('click', function(){
+    bottomMid.addEventListener('click', function () {
         localStorage.setItem("notes", content.innerHTML);
-    })
-
-    //delete functionality
-    bottomRight.addEventListener('click', function(){
-
-           let parentDiv = this.parentElement.parentElement; 
-           parentDiv.remove();
-
-           localStorage.setItem("notes", content.innerHTML);
-
-    })
-
     });
+
+    bottomRight.addEventListener('click', function () {
+        let parentDiv = this.parentElement.parentElement;
+        parentDiv.remove();
+        localStorage.setItem("notes", content.innerHTML);
+    });
+
+
+});
+
+
+let inputBoxContainers = content.querySelectorAll(".inputBoxContainer");
+
+for (let inputBoxContainer of inputBoxContainers) {
+    let bottomMid = inputBoxContainer.querySelector('.bottomMid');
+    let bottomRight = inputBoxContainer.querySelector('.bottomRight');
+
+    bottomMid.addEventListener('click', function () {
+        localStorage.setItem("notes", content.innerHTML);
+    });
+
+    bottomRight.addEventListener('click', function () {
+        let parentDiv = this.parentElement.parentElement;
+        parentDiv.remove();
+        localStorage.setItem("notes", content.innerHTML);
+    });
+}
